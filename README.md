@@ -59,7 +59,7 @@
 **本仓库为第三方插件库，需在MoviePilot中添加仓库地址使用**
 
 1. 在MoviePilot的插件商店页面，点击"添加第三方仓库"
-2. 添加本仓库地址：`https://github.com/madrays/MoviePilot-Plugins`
+2. 添加本仓库地址：`https://github.com/firebat1314/moviepilot-plugins`
 3. 添加成功后，在插件列表中找到需要的插件
 4. 安装并启用插件
 5. 根据下方说明配置插件参数
@@ -115,7 +115,7 @@
 
 TOTP两步验证助手需要配合浏览器扩展使用：
 
-1. 下载浏览器扩展：[下载链接](https://github.com/madrays/MoviePilot-Plugins/raw/main/TOTP-Extension.zip)
+1. 下载浏览器扩展：[下载链接](https://github.com/firebat1314/moviepilot-plugins/raw/main/TOTP-Extension.zip)
 2. 解压下载的文件
 3. 在浏览器的扩展管理页面中选择"加载已解压的扩展程序"
 4. 选择解压后的文件夹

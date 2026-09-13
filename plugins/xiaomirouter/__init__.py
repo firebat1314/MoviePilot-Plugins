@@ -36,7 +36,7 @@ class xiaomirouter(_PluginBase):
     # 插件元信息
     plugin_name = "小米路由器监控"
     plugin_desc = "登录小米路由器并获取运行状态，支持端口映射管理与快捷一键切换"
-    plugin_icon = "https://raw.githubusercontent.com/madrays/MoviePilot-Plugins/main/icons/xiaomi.png"
+    plugin_icon = "https://raw.githubusercontent.com/firebat1314/moviepilot-plugins/main/icons/xiaomi.png"
     plugin_version = "1.0.0"
     plugin_author = "madrays"
     author_url = "https://github.com/madrays"

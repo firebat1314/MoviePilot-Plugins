@@ -1,7 +1,7 @@
 # 末日黑奴的自我修养
 
-[![版本](https://img.shields.io/badge/版本-1.0.0-blue)](https://github.com/madrays/MoviePilot-Plugins)
-[![支持的站点](https://img.shields.io/badge/支持站点-末日-red)](https://github.com/madrays/MoviePilot-Plugins)
+[![版本](https://img.shields.io/badge/版本-1.0.0-blue)](https://github.com/firebat1314/moviepilot-plugins)
+[![支持的站点](https://img.shields.io/badge/支持站点-末日-red)](https://github.com/firebat1314/moviepilot-plugins)
 
 ## 简介
 
@@ -24,7 +24,7 @@
 
 ## 安装方法
 
-1. 在MoviePilot插件商店中添加第三方仓库：`https://github.com/madrays/MoviePilot-Plugins`
+1. 在MoviePilot插件商店中添加第三方仓库：`https://github.com/firebat1314/moviepilot-plugins`
 2. 在第三方插件列表中找到并安装"末日黑奴的自我修养"
 3. 进入插件设置页面完成配置
 

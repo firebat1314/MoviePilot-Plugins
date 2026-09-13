@@ -91,7 +91,7 @@ const mockDatabase = reactive$3({
       order: 50,
       description: '定时清理插件产生的日志文件，支持按行数和时间清理，保持系统整洁',
       author: 'madrays',
-      icon: 'https://cdn.jsdelivr.net/gh/madrays/MoviePilot-Plugins@main/icons/clean.png',
+      icon: 'https://cdn.jsdelivr.net/gh/firebat1314/moviepilot-plugins@main/icons/clean.png',
       type: 'online',
       installed: true,
       status: 'running'
@@ -187,7 +187,7 @@ const mockDatabase = reactive$3({
       id: 'logsclean',
       name: '日志清理Vue',
       version: '2.0',
-      icon: 'https://cdn.jsdelivr.net/gh/madrays/MoviePilot-Plugins@main/icons/clean.png'
+      icon: 'https://cdn.jsdelivr.net/gh/firebat1314/moviepilot-plugins@main/icons/clean.png'
     }
   ]
 });

@@ -29,13 +29,13 @@ class smarthardlink(_PluginBase):
     # 插件描述
     plugin_desc = "通过计算文件SHA1，将指定目录中相同SHA1的文件只保留一个，其他的用硬链接替换，用来清理重复占用的磁盘空间。"
     # 插件图标
-    plugin_icon = "https://raw.githubusercontent.com/madrays/MoviePilot-Plugins/main/icons/hardlink.png"
+    plugin_icon = "https://raw.githubusercontent.com/firebat1314/moviepilot-plugins/main/icons/hardlink.png"
     # 插件版本
     plugin_version = "1.0.5"
     # 插件作者
     plugin_author = "madrays"
     # 作者主页
-    author_url = "https://github.com/madrays/MoviePilot-Plugins"
+    author_url = "https://github.com/firebat1314/moviepilot-plugins"
     # 插件配置项ID前缀
     plugin_config_prefix = "smarthardlink_"
     # 加载顺序

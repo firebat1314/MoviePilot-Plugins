@@ -18,7 +18,7 @@ class PluginManagerVue(_PluginBase):
     # 插件描述
     plugin_desc = "集成插件热重载、彻底卸载、重装等功能，支持本地和在线插件管理。"
     # 插件图标
-    plugin_icon = "https://raw.githubusercontent.com/madrays/MoviePilot-Plugins/main/icons/manager.png"
+    plugin_icon = "https://raw.githubusercontent.com/firebat1314/moviepilot-plugins/main/icons/manager.png"
     # 插件版本
     plugin_version = "1.0.3"
     # 插件作者

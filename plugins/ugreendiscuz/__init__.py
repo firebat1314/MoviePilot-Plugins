@@ -17,7 +17,7 @@ import requests
 class ugreendiscuz(_PluginBase):
     plugin_name = "绿联论坛签到"
     plugin_desc = "自动登录刷新Cookie或手动Cookie，登录即签到；抓取头像、积分等信息并展示与通知"
-    plugin_icon = "https://raw.githubusercontent.com/madrays/MoviePilot-Plugins/main/icons/lvlian.jpg"
+    plugin_icon = "https://raw.githubusercontent.com/firebat1314/moviepilot-plugins/main/icons/lvlian.jpg"
     plugin_version = "1.0.0"
     plugin_author = "madrays"
     author_url = "https://github.com/madrays"

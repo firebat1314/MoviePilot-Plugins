@@ -43,7 +43,7 @@
 4. 错误日志或截图
 
 提交方式：
-- GitHub Issues: [https://github.com/madrays/MoviePilot-Plugins/issues](https://github.com/madrays/MoviePilot-Plugins/issues)
+- GitHub Issues: [https://github.com/firebat1314/moviepilot-plugins/issues](https://github.com/firebat1314/moviepilot-plugins/issues)
 - 通过MoviePilot内置反馈功能
 
 ## 注意事项

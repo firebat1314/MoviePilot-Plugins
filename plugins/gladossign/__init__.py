@@ -16,7 +16,7 @@ import requests
 class gladossign(_PluginBase):
     plugin_name = "GlaDOS 签到"
     plugin_desc = "每日签到获取点数；积累点数可兑换 10~100 天套餐时长"
-    plugin_icon = "https://raw.githubusercontent.com/madrays/MoviePilot-Plugins/main/icons/glados.png"
+    plugin_icon = "https://raw.githubusercontent.com/firebat1314/moviepilot-plugins/main/icons/glados.png"
     plugin_version = "1.7.0"
     plugin_author = "madrays"
     author_url = "https://github.com/madrays"
@@ -500,7 +500,7 @@ class gladossign(_PluginBase):
                                         {'component': 'VBtn', 'props': {'href': 'https://glados.space/landing/1F8CJ-TKYWO-KHOV3-PN7X2', 'target': '_blank', 'rel': 'noopener', 'color': 'indigo', 'variant': 'elevated', 'class': 'mt-2'}, 'text': '✨ 立即注册'}
                                     ]},
                                     {'component': 'VCol', 'props': {'cols': 12, 'md': 4}, 'content': [
-                                        {'component': 'VImg', 'props': {'src': 'https://raw.githubusercontent.com/madrays/MoviePilot-Plugins/main/icons/glados.png', 'height': 120, 'class': 'rounded-lg'}}
+                                        {'component': 'VImg', 'props': {'src': 'https://raw.githubusercontent.com/firebat1314/moviepilot-plugins/main/icons/glados.png', 'height': 120, 'class': 'rounded-lg'}}
                                     ]}
                                 ]}
                             ]}

@@ -23,7 +23,7 @@ class twofahelper(_PluginBase):
     # 插件描述
     plugin_desc = "懒人板2FA，配合浏览器扩展使用，支持自动弹出验证码一键复制"
     # 插件图标
-    plugin_icon = "https://raw.githubusercontent.com/madrays/MoviePilot-Plugins/main/icons/2fa.png"
+    plugin_icon = "https://raw.githubusercontent.com/firebat1314/moviepilot-plugins/main/icons/2fa.png"
     # 插件版本
     plugin_version = "1.2.7"
     # 插件作者
@@ -903,7 +903,7 @@ class twofahelper(_PluginBase):
                                                             {
                                                                 'component': 'a',
                                                                 'props': {
-                                                                    'href': 'https://github.com/madrays/MoviePilot-Plugins/releases',
+                                                                    'href': 'https://github.com/firebat1314/moviepilot-plugins/releases',
                                                                     'target': '_blank',
                                                                     'class': 'text-decoration-none mr-3 mb-1',
                                                                     'style': 'color: #1976d2; display: inline-flex; align-items: center;'
@@ -926,7 +926,7 @@ class twofahelper(_PluginBase):
                                                             {
                                                                 'component': 'a',
                                                                 'props': {
-                                                                    'href': 'https://github.com/madrays/MoviePilot-Plugins/blob/main/README.md#totp浏览器扩展说明',
+                                                                    'href': 'https://github.com/firebat1314/moviepilot-plugins/blob/main/README.md#totp浏览器扩展说明',
                                                                     'target': '_blank',
                                                                     'class': 'text-decoration-none mb-1',
                                                                     'style': 'color: #1976d2; display: inline-flex; align-items: center;'

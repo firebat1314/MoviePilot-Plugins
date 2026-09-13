@@ -43,7 +43,7 @@ class fnossign(_PluginBase):
     # 插件描述
     plugin_desc = "自动完成飞牛论坛每日签到，支持失败重试和历史记录"
     # 插件图标
-    plugin_icon = "https://raw.githubusercontent.com/madrays/MoviePilot-Plugins/main/icons/fnos.ico"
+    plugin_icon = "https://raw.githubusercontent.com/firebat1314/moviepilot-plugins/main/icons/fnos.ico"
     # 插件版本
     plugin_version = "2.5.7"
     # 插件作者

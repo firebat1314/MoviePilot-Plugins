@@ -13,7 +13,7 @@ MoviePilot第三方插件，用于自动完成柠檬站点每日免费神游三�
 
 ## 安装方法
 
-1. 在MoviePilot插件商店中添加第三方仓库：`https://github.com/madrays/MoviePilot-Plugins`
+1. 在MoviePilot插件商店中添加第三方仓库：`https://github.com/firebat1314/moviepilot-plugins`
 2. 在第三方插件列表中找到并安装"柠檬站点神游"
 3. 进入插件设置页面完成配置
 

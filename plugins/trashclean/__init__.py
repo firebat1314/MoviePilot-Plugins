@@ -57,7 +57,7 @@ class TrashClean(_PluginBase):
     # 插件信息
     plugin_name = "垃圾文件清理"
     plugin_desc = "自动清理下载文件夹中的垃圾文件"
-    plugin_icon = "https://raw.githubusercontent.com/madrays/MoviePilot-Plugins/main/icons/clean1.png"
+    plugin_icon = "https://raw.githubusercontent.com/firebat1314/moviepilot-plugins/main/icons/clean1.png"
     plugin_version = "1.1"
     plugin_author = "madrays"
     author_url = "https://github.com/madrays"

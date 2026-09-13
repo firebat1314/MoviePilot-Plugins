@@ -36,7 +36,7 @@ class moriservitude(_PluginBase):
     # 插件描述  
     plugin_desc = "监控末日站点保种情况，检查保种体积要求，计算距离退休时间"
     # 插件图标
-    plugin_icon = "https://raw.githubusercontent.com/madrays/MoviePilot-Plugins/main/icons/agsv.png"
+    plugin_icon = "https://raw.githubusercontent.com/firebat1314/moviepilot-plugins/main/icons/agsv.png"
     # 插件版本
     plugin_version = "1.0.0"
     # 插件作者

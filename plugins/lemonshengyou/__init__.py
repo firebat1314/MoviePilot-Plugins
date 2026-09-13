@@ -27,7 +27,7 @@ class lemonshengyou(_PluginBase):
     # 插件描述
     plugin_desc = "自动完成柠檬站点每日免费神游三清天，获取奖励。"
     # 插件图标
-    plugin_icon = "https://raw.githubusercontent.com/madrays/MoviePilot-Plugins/main/icons/lemon.ico"
+    plugin_icon = "https://raw.githubusercontent.com/firebat1314/moviepilot-plugins/main/icons/lemon.ico"
     # 插件版本
     plugin_version = "1.0.5"
     # 插件作者

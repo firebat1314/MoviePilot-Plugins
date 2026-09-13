@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         versionElement.addEventListener('click', function() {
             // 打开GitHub仓库release页面
             chrome.tabs.create({
-                url: 'https://github.com/madrays/MoviePilot-Plugins/releases'
+                url: 'https://github.com/firebat1314/moviepilot-plugins/releases'
             });
         });
     }
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
         updateNotice.addEventListener('click', function() {
             // 打开GitHub仓库或下载页面
             chrome.tabs.create({
-                url: 'https://github.com/madrays/MoviePilot-Plugins/releases'
+                url: 'https://github.com/firebat1314/moviepilot-plugins/releases'
             });
         });
     }
@@ -1878,7 +1878,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // 使用随机参数避免缓存
             const timestamp = new Date().getTime();
-            const response = await fetch(`https://api.github.com/repos/madrays/MoviePilot-Plugins/releases?_=${timestamp}`, {
+            const response = await fetch(`https://api.github.com/repos/firebat1314/moviepilot-plugins/releases?_=${timestamp}`, {
                 headers: {
                     'Accept': 'application/vnd.github.v3+json',
                     // 添加User-Agent来避免GitHub API的一些限制
@@ -2057,7 +2057,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     statusAction.classList.add('latest');
                     statusAction.onclick = function() {
                         chrome.tabs.create({
-                            url: 'https://github.com/madrays/MoviePilot-Plugins/releases'
+                            url: 'https://github.com/firebat1314/moviepilot-plugins/releases'
                         });
                     };
                     
@@ -2077,7 +2077,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     statusAction.classList.add('update');
                     statusAction.onclick = function() {
                         chrome.tabs.create({
-                            url: 'https://github.com/madrays/MoviePilot-Plugins/releases'
+                            url: 'https://github.com/firebat1314/moviepilot-plugins/releases'
                         });
                     };
                     

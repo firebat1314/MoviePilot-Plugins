@@ -97,7 +97,7 @@ class QmjSign(_PluginBase):
     # 插件描述
     plugin_desc = "自动完成阡陌居每日签到，支持失败重试和历史记录"
     # 插件图标
-    plugin_icon = "https://raw.githubusercontent.com/madrays/MoviePilot-Plugins/main/icons/qmj.ico"
+    plugin_icon = "https://raw.githubusercontent.com/firebat1314/moviepilot-plugins/main/icons/qmj.ico"
     # 插件版本
     plugin_version = "1.1.3"
     # 插件作者

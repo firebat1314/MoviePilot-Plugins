@@ -51,7 +51,7 @@ class HdhiveSign(_PluginBase):
     # 插件描述
     plugin_desc = "自动完成影巢(HDHive)每日签到/赌狗签到，支持失败重试和历史记录"
     # 插件图标
-    plugin_icon = "https://raw.githubusercontent.com/madrays/MoviePilot-Plugins/main/icons/hdhive.ico"
+    plugin_icon = "https://raw.githubusercontent.com/firebat1314/moviepilot-plugins/main/icons/hdhive.ico"
     # 插件版本
     plugin_version = "1.5.0"
     # 插件作者
