@@ -7,8 +7,8 @@
 - 插件名称：两步验证助手
 - 插件描述：生成TOTP验证码并通过浏览器扩展使用
 - 插件版本：1.0
-- 插件作者：madrays
-- 作者主页：https://github.com/madrays
+- 插件作者：firebat1314
+- 作者主页：https://github.com/firebat1314
 - 认证级别：1
 
 ## 主要功能

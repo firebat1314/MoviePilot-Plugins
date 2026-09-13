@@ -1,7 +1,7 @@
 """
 飞牛论坛签到插件
 版本: 2.5.7
-作者: madrays
+作者: firebat1314
 功能:
 - 自动完成飞牛论坛每日签到
 - 支持签到失败重试
@@ -47,9 +47,9 @@ class fnossign(_PluginBase):
     # 插件版本
     plugin_version = "2.5.7"
     # 插件作者
-    plugin_author = "madrays"
+    plugin_author = "firebat1314"
     # 作者主页
-    author_url = "https://github.com/madrays"
+    author_url = "https://github.com/firebat1314"
     # 插件配置项ID前缀
     plugin_config_prefix = "fnossign_"
     # 加载顺序

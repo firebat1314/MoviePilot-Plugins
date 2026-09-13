@@ -185,9 +185,9 @@ class FengchaoSignin(_PluginBase):
     # 插件版本
     plugin_version = "3.1.5"
     # 插件作者
-    plugin_author = "madrays"
+    plugin_author = "firebat1314"
     # 作者主页
-    author_url = "https://github.com/madrays"
+    author_url = "https://github.com/firebat1314"
     # 插件配置项ID前缀
     plugin_config_prefix = "fengchaosignin_"
     # 加载顺序
@@ -1761,7 +1761,7 @@ class FengchaoSignin(_PluginBase):
                     ]},
                     {"component": "div", "props": {"class": "d-flex align-center justify-center mt-1", "style": "color: rgba(128, 128, 128, 0.78);"}, "content": [
                         {"component": "span", "props": {"class": "text-caption"}, "text": "蜂巢论坛出品"},
-                        {"component": "span", "props": {"class": "text-caption ml-1", "style": "opacity: 0.5;"}, "text": "· @madrays"},
+                        {"component": "span", "props": {"class": "text-caption ml-1", "style": "opacity: 0.5;"}, "text": "· @firebat1314"},
                     ]},
                 ]},
                 {"component": "VBtn", "props": {

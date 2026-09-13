@@ -90,7 +90,7 @@ const mockDatabase = reactive$3({
       version: '2.0',
       order: 50,
       description: '定时清理插件产生的日志文件，支持按行数和时间清理，保持系统整洁',
-      author: 'madrays',
+      author: 'firebat1314',
       icon: 'https://cdn.jsdelivr.net/gh/firebat1314/moviepilot-plugins@main/icons/clean.png',
       type: 'online',
       installed: true,

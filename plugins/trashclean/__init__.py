@@ -59,8 +59,8 @@ class TrashClean(_PluginBase):
     plugin_desc = "自动清理下载文件夹中的垃圾文件"
     plugin_icon = "https://raw.githubusercontent.com/firebat1314/moviepilot-plugins/main/icons/clean1.png"
     plugin_version = "1.1"
-    plugin_author = "madrays"
-    author_url = "https://github.com/madrays"
+    plugin_author = "firebat1314"
+    author_url = "https://github.com/firebat1314"
     plugin_config_prefix = "trashclean_"
     plugin_order = 75
     auth_level = 1

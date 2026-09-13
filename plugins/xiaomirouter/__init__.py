@@ -1,7 +1,7 @@
 """
 小米路由器监控插件
 版本: 1.0.0
-作者: madrays
+作者: firebat1314
 功能：
 - 自动登录小米路由器（适配新旧加密），抓取实时运行状态（在线设备、上下行、流量、CPU/内存、运行时长等）。
 - 端口映射管理：列表、添加、删除。支持在设置页一次性执行或通过指令即时执行。
@@ -38,8 +38,8 @@ class xiaomirouter(_PluginBase):
     plugin_desc = "登录小米路由器并获取运行状态，支持端口映射管理与快捷一键切换"
     plugin_icon = "https://raw.githubusercontent.com/firebat1314/moviepilot-plugins/main/icons/xiaomi.png"
     plugin_version = "1.0.0"
-    plugin_author = "madrays"
-    author_url = "https://github.com/madrays"
+    plugin_author = "firebat1314"
+    author_url = "https://github.com/firebat1314"
     plugin_config_prefix = "xiaomirouter_"
     plugin_order = 5
     auth_level = 2

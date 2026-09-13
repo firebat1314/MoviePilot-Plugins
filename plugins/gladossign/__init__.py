@@ -18,8 +18,8 @@ class gladossign(_PluginBase):
     plugin_desc = "每日签到获取点数；积累点数可兑换 10~100 天套餐时长"
     plugin_icon = "https://raw.githubusercontent.com/firebat1314/moviepilot-plugins/main/icons/glados.png"
     plugin_version = "1.7.0"
-    plugin_author = "madrays"
-    author_url = "https://github.com/madrays"
+    plugin_author = "firebat1314"
+    author_url = "https://github.com/firebat1314"
     plugin_config_prefix = "gladossign_"
     plugin_order = 1
     auth_level = 2
