@@ -1,5 +1,5 @@
 """
-飞牛论坛签到插件
+飞牛签到插件
 版本: 2.5.7
 作者: firebat1314
 功能:
@@ -37,9 +37,9 @@ except Exception:
     cloak_launch_context = None
 
 
-class fnossign(_PluginBase):
+class fnossign1(_PluginBase):
     # 插件名称
-    plugin_name = "飞牛论坛签到"
+    plugin_name = "飞牛签到"
     # 插件描述
     plugin_desc = "自动完成飞牛论坛每日签到，支持失败重试和历史记录"
     # 插件图标
@@ -51,7 +51,7 @@ class fnossign(_PluginBase):
     # 作者主页
     author_url = "https://github.com/firebat1314"
     # 插件配置项ID前缀
-    plugin_config_prefix = "fnossign_"
+    plugin_config_prefix = "fnossign1_"
     # 加载顺序
     plugin_order = 1
     # 可使用的用户级别
@@ -76,7 +76,7 @@ class fnossign(_PluginBase):
         # 停止现有任务
         self.stop_service()
 
-        logger.info("============= fnossign 初始化 =============")
+        logger.info("============= fnossign1 初始化 =============")
         try:
             if config:
                 self._enabled = config.get("enabled")
@@ -101,7 +101,7 @@ class fnossign(_PluginBase):
                 self._manual_trigger = True
                 self._scheduler.add_job(func=self.sign, trigger='date',
                                     run_date=datetime.now(tz=pytz.timezone(settings.TZ)) + timedelta(seconds=3),
-                                    name="飞牛论坛签到")
+                                    name="飞牛签到")
                 self._onlyonce = False
 
             if self._log_profile_once:
@@ -132,7 +132,7 @@ class fnossign(_PluginBase):
                 self._scheduler.start()
 
         except Exception as e:
-            logger.error(f"fnossign初始化错误: {str(e)}", exc_info=True)
+            logger.error(f"fnossign1初始化错误: {str(e)}", exc_info=True)
 
     def sign(self, retry_count=0, extended_retry=0):
         """
@@ -257,7 +257,7 @@ class fnossign(_PluginBase):
                         if self._notify:
                             self.post_message(
                                 mtype=NotificationType.SiteMessage,
-                                title="【飞牛论坛签到失败】",
+                                title="【飞牛签到失败】",
                                 text=f"❌ Cookie无效，缺少必要值: {', '.join(missing_cookies)}"
                             )
                             notification_sent = True
@@ -276,7 +276,7 @@ class fnossign(_PluginBase):
                     if self._notify:
                         self.post_message(
                             mtype=NotificationType.SiteMessage,
-                            title="【飞牛论坛签到失败】",
+                            title="【飞牛签到失败】",
                             text=f"❌ Cookie解析错误: {str(e)}"
                         )
                         notification_sent = True
@@ -292,7 +292,7 @@ class fnossign(_PluginBase):
                 if self._notify:
                     self.post_message(
                         mtype=NotificationType.SiteMessage,
-                        title="【飞牛论坛签到失败】",
+                        title="【飞牛签到失败】",
                         text="❌ 未配置Cookie，请在设置中添加Cookie"
                     )
                     notification_sent = True
@@ -361,7 +361,7 @@ class fnossign(_PluginBase):
                 if self._notify:
                     self.post_message(
                         mtype=NotificationType.SiteMessage,
-                        title="【飞牛论坛签到失败】",
+                        title="【飞牛签到失败】",
                         text="❌ Cookie无效或已过期，请更新Cookie"
                     )
                     notification_sent = True
@@ -380,7 +380,7 @@ class fnossign(_PluginBase):
                     if self._notify:
                         self.post_message(
                             mtype=NotificationType.SiteMessage,
-                            title="【飞牛论坛签到重试】",
+                            title="【飞牛签到重试】",
                             text=f"❗ 访问论坛首页超时，{self._retry_interval}秒后将进行第{retry_count+1}次常规重试"
                         )
                     time.sleep(self._retry_interval)
@@ -393,7 +393,7 @@ class fnossign(_PluginBase):
                     if self._notify:
                         self.post_message(
                             mtype=NotificationType.SiteMessage,
-                            title="【飞牛论坛签到延长重试】",
+                            title="【飞牛签到延长重试】",
                             text=f"⚠️ 常规重试{self._max_retries}次后首页仍访问超时，将在5分钟后进行第{next_retry}次延长重试"
                         )
                     
@@ -402,14 +402,14 @@ class fnossign(_PluginBase):
                     
                     # 安排延迟任务
                     scheduler = BackgroundScheduler(timezone=settings.TZ)
-                    retry_job_id = f"fnossign_extended_retry_{next_retry}"
+                    retry_job_id = f"fnossign1_extended_retry_{next_retry}"
                     scheduler.add_job(
                         func=self.sign,
                         trigger='date',
                         id=retry_job_id,
                         run_date=datetime.now(tz=pytz.timezone(settings.TZ)) + timedelta(seconds=delay),
                         args=[0, next_retry],
-                        name=f"飞牛论坛签到延长重试{next_retry}"
+                        name=f"飞牛签到延长重试{next_retry}"
                     )
                     scheduler.start()
                     
@@ -432,7 +432,7 @@ class fnossign(_PluginBase):
                 if self._notify:
                     self.post_message(
                         mtype=NotificationType.SiteMessage,
-                        title="【❌ 飞牛论坛签到失败】",
+                        title="【❌ 飞牛签到失败】",
                         text="❌ 访问论坛首页多次超时，所有重试均失败，请检查网络连接或站点状态"
                     )
                     notification_sent = True
@@ -445,7 +445,7 @@ class fnossign(_PluginBase):
                     if self._notify:
                         self.post_message(
                             mtype=NotificationType.SiteMessage,
-                            title="【飞牛论坛签到重试】",
+                            title="【飞牛签到重试】",
                             text=f"❗ 访问论坛首页出错: {str(e)}，{self._retry_interval}秒后将进行第{retry_count+1}次常规重试"
                         )
                     time.sleep(self._retry_interval)
@@ -458,7 +458,7 @@ class fnossign(_PluginBase):
                     if self._notify:
                         self.post_message(
                             mtype=NotificationType.SiteMessage,
-                            title="【飞牛论坛签到延长重试】",
+                            title="【飞牛签到延长重试】",
                             text=f"⚠️ 常规重试{self._max_retries}次后首页访问仍出错，将在5分钟后进行第{next_retry}次延长重试"
                         )
                     
@@ -467,14 +467,14 @@ class fnossign(_PluginBase):
                     
                     # 安排延迟任务
                     scheduler = BackgroundScheduler(timezone=settings.TZ)
-                    retry_job_id = f"fnossign_extended_retry_{next_retry}"
+                    retry_job_id = f"fnossign1_extended_retry_{next_retry}"
                     scheduler.add_job(
                         func=self.sign,
                         trigger='date',
                         id=retry_job_id,
                         run_date=datetime.now(tz=pytz.timezone(settings.TZ)) + timedelta(seconds=delay),
                         args=[0, next_retry],
-                        name=f"飞牛论坛签到延长重试{next_retry}"
+                        name=f"飞牛签到延长重试{next_retry}"
                     )
                     scheduler.start()
                     
@@ -497,7 +497,7 @@ class fnossign(_PluginBase):
                 if self._notify:
                     self.post_message(
                         mtype=NotificationType.SiteMessage,
-                        title="【❌ 飞牛论坛签到失败】",
+                        title="【❌ 飞牛签到失败】",
                         text=f"❌ 访问论坛首页多次出错: {str(e)}，所有重试均失败"
                     )
                     notification_sent = True
@@ -516,7 +516,7 @@ class fnossign(_PluginBase):
                     if self._notify:
                         self.post_message(
                             mtype=NotificationType.SiteMessage,
-                            title="【飞牛论坛签到重试】",
+                            title="【飞牛签到重试】",
                             text=f"❗ 访问签到页面超时，{self._retry_interval}秒后将进行第{retry_count+1}次常规重试"
                         )
                     time.sleep(self._retry_interval)
@@ -529,7 +529,7 @@ class fnossign(_PluginBase):
                     if self._notify:
                         self.post_message(
                             mtype=NotificationType.SiteMessage,
-                            title="【飞牛论坛签到延长重试】",
+                            title="【飞牛签到延长重试】",
                             text=f"⚠️ 常规重试{self._max_retries}次后仍失败，将在5分钟后进行第{next_retry}次延长重试"
                         )
                     
@@ -538,14 +538,14 @@ class fnossign(_PluginBase):
                     
                     # 安排延迟任务
                     scheduler = BackgroundScheduler(timezone=settings.TZ)
-                    retry_job_id = f"fnossign_extended_retry_{next_retry}"
+                    retry_job_id = f"fnossign1_extended_retry_{next_retry}"
                     scheduler.add_job(
                         func=self.sign,
                         trigger='date',
                         id=retry_job_id,
                         run_date=datetime.now(tz=pytz.timezone(settings.TZ)) + timedelta(seconds=delay),
                         args=[0, next_retry],
-                        name=f"飞牛论坛签到延长重试{next_retry}"
+                        name=f"飞牛签到延长重试{next_retry}"
                     )
                     scheduler.start()
                     
@@ -568,7 +568,7 @@ class fnossign(_PluginBase):
                 if self._notify:
                     self.post_message(
                         mtype=NotificationType.SiteMessage,
-                        title="【❌ 飞牛论坛签到失败】",
+                        title="【❌ 飞牛签到失败】",
                         text="❌ 访问签到页面多次超时，所有重试均已失败，请检查网络连接或站点状态"
                     )
                     notification_sent = True
@@ -664,7 +664,7 @@ class fnossign(_PluginBase):
                     if self._notify:
                         self.post_message(
                             mtype=NotificationType.SiteMessage,
-                            title="【飞牛论坛签到重试】",
+                            title="【飞牛签到重试】",
                             text=f"❗ 未找到签到参数，{self._retry_interval}秒后将进行第{retry_count+1}次常规重试"
                         )
                     time.sleep(self._retry_interval)
@@ -677,7 +677,7 @@ class fnossign(_PluginBase):
                     if self._notify:
                         self.post_message(
                             mtype=NotificationType.SiteMessage,
-                            title="【飞牛论坛签到延长重试】",
+                            title="【飞牛签到延长重试】",
                             text=f"⚠️ 常规重试{self._max_retries}次后仍未找到签到参数，将在5分钟后进行第{next_retry}次延长重试"
                         )
                     
@@ -686,14 +686,14 @@ class fnossign(_PluginBase):
                     
                     # 安排延迟任务
                     scheduler = BackgroundScheduler(timezone=settings.TZ)
-                    retry_job_id = f"fnossign_extended_retry_{next_retry}"
+                    retry_job_id = f"fnossign1_extended_retry_{next_retry}"
                     scheduler.add_job(
                         func=self.sign,
                         trigger='date',
                         id=retry_job_id,
                         run_date=datetime.now(tz=pytz.timezone(settings.TZ)) + timedelta(seconds=delay),
                         args=[0, next_retry],
-                        name=f"飞牛论坛签到延长重试{next_retry}"
+                        name=f"飞牛签到延长重试{next_retry}"
                     )
                     scheduler.start()
                     
@@ -716,7 +716,7 @@ class fnossign(_PluginBase):
                 if self._notify:
                     self.post_message(
                         mtype=NotificationType.SiteMessage,
-                        title="【❌ 飞牛论坛签到失败】",
+                        title="【❌ 飞牛签到失败】",
                         text="❌ 签到失败: 所有重试后仍未找到签到参数，请检查站点是否变更"
                     )
                     notification_sent = True
@@ -801,7 +801,7 @@ class fnossign(_PluginBase):
                             if not notification_sent and self._notify:
                                 self.post_message(
                                     mtype=NotificationType.SiteMessage,
-                                    title="【✅ 飞牛论坛签到成功】",
+                                    title="【✅ 飞牛签到成功】",
                                     text=f"签到成功，但获取详细信息失败\n⏱️ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
                                 )
                                 notification_sent = True
@@ -812,7 +812,7 @@ class fnossign(_PluginBase):
                         if not notification_sent and self._notify:
                             self.post_message(
                                 mtype=NotificationType.SiteMessage,
-                                title="【✅ 飞牛论坛签到成功】",
+                                title="【✅ 飞牛签到成功】",
                                 text=f"签到成功，但获取详细信息失败\n⏱️ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
                             )
                             notification_sent = True
@@ -901,7 +901,7 @@ class fnossign(_PluginBase):
                     if self._notify and not notification_sent:
                         self.post_message(
                             mtype=NotificationType.SiteMessage,
-                            title="【❌ 飞牛论坛签到失败】",
+                            title="【❌ 飞牛签到失败】",
                             text="❌ 签到执行超时，已强制终止，请检查网络或站点状态"
                         )
                         notification_sent = True
@@ -923,7 +923,7 @@ class fnossign(_PluginBase):
                 if self._notify and not notification_sent:
                     self.post_message(
                         mtype=NotificationType.SiteMessage,
-                        title="【❌ 飞牛论坛签到失败】",
+                        title="【❌ 飞牛签到失败】",
                         text="❌ 签到执行超时，已强制终止，请检查网络或站点状态"
                     )
                     notification_sent = True
@@ -1302,7 +1302,7 @@ class fnossign(_PluginBase):
         
         # 构建通知文本
         if "签到成功" in status:
-            title = "【✅ 飞牛论坛签到成功】"
+            title = "【✅ 飞牛签到成功】"
             
             if credits_missing:
                 text = (
@@ -1360,7 +1360,7 @@ class fnossign(_PluginBase):
                     f"━━━━━━━━━━"
                 )
         else:
-            title = "【❌ 飞牛论坛签到失败】"
+            title = "【❌ 飞牛签到失败】"
             text = (
                 f"📢 执行结果\n"
                 f"━━━━━━━━━━\n"
@@ -1385,15 +1385,15 @@ class fnossign(_PluginBase):
         )
 
     def get_state(self) -> bool:
-        logger.info(f"fnossign状态: {self._enabled}")
+        logger.info(f"fnossign1状态: {self._enabled}")
         return self._enabled
 
     def get_service(self) -> List[Dict[str, Any]]:
         if self._enabled and self._cron:
             logger.info(f"注册定时服务: {self._cron}")
             return [{
-                "id": "fnossign",
-                "name": "飞牛论坛签到",
+                "id": "fnossign1",
+                "name": "飞牛签到",
                 "trigger": CronTrigger.from_crontab(self._cron),
                 "func": self.sign,
                 "kwargs": {}
@@ -1694,7 +1694,7 @@ class fnossign(_PluginBase):
                     {
                         'component': 'VCardTitle',
                         'props': {'class': 'text-h6'},
-                        'text': '📊 飞牛论坛签到历史'
+                        'text': '📊 飞牛签到历史'
                     },
                     {
                         'component': 'VCardText',
@@ -1758,7 +1758,7 @@ class fnossign(_PluginBase):
     def _clear_extended_retry_tasks(self):
         """清理所有延长重试任务"""
         try:
-            # 查找所有fnossign_extended_retry开头的任务，并停止它们
+            # 查找所有fnossign1_extended_retry开头的任务，并停止它们
             from apscheduler.schedulers.background import BackgroundScheduler
             import apscheduler.schedulers
             
@@ -1916,7 +1916,7 @@ class fnossign(_PluginBase):
         if self._notify:
             self.post_message(
                 mtype=NotificationType.SiteMessage,
-                title="【飞牛论坛签到暂停】",
+                title="【飞牛签到暂停】",
                 text=text,
             )
         return sign_dict
